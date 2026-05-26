@@ -7,6 +7,6 @@ public class JsonRender implements Render {
 
     @Override
     public String render(SwaggerDiff diff) {
-        return JSON.toJSONString(diff);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -4,7 +4,7 @@ import io.swagger.models.properties.Property;
 
 /**
  * property with expression Language grammar
- * 
+ *
  * @author Sayi
  * @version
  */
@@ -16,46 +16,48 @@ public class ElProperty {
 
     // optional change metadata
     private boolean isTypeChange;
+
     private boolean newEnums;
+
     private boolean removedEnums;
 
     public Property getProperty() {
-        return property;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setProperty(Property property) {
-        this.property = property;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getEl() {
-        return el;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEl(String el) {
-        this.el = el;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isTypeChange() {
-        return isTypeChange;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setTypeChange(boolean typeChange) {
-        isTypeChange = typeChange;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isNewEnums() {
-        return newEnums;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setNewEnums(boolean newEnums) {
-        this.newEnums = newEnums;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isRemovedEnums() {
-        return removedEnums;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRemovedEnums(boolean removedEnums) {
-        this.removedEnums = removedEnums;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-
 import com.deepoove.swagger.diff.model.ElProperty;
-
 import io.swagger.models.ArrayModel;
 import io.swagger.models.Model;
 import io.swagger.models.RefModel;
@@ -21,17 +19,20 @@ import io.swagger.models.properties.StringProperty;
 
 /**
  * compare two model
- * 
+ *
  * @author Sayi
  * @version
  */
 public class ModelDiff {
 
     private List<ElProperty> increased;
+
     private List<ElProperty> missing;
+
     private List<ElProperty> changed;
 
     Map<String, Model> oldDedinitions;
+
     Map<String, Model> newDedinitions;
 
     private ModelDiff() {
@@ -41,44 +42,35 @@ public class ModelDiff {
     }
 
     public static ModelDiff buildWithDefinition(Map<String, Model> left, Map<String, Model> right) {
-        ModelDiff diff = new ModelDiff();
-        diff.oldDedinitions = left;
-        diff.newDedinitions = right;
-        return diff;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ModelDiff diff(Model leftModel, Model rightModel) {
-        return this.diff(leftModel, rightModel, null, new HashSet<Model>());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ModelDiff diff(Model leftModel, Model rightModel, String parentEl) {
-        return this.diff(leftModel, rightModel, parentEl, new HashSet<Model>());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ModelDiff diff(Property leftProperty, Property rightProperty) {
-        return this.diff(findModel(leftProperty, oldDedinitions), findModel(rightProperty, newDedinitions));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private ModelDiff diff(Model leftInputModel, Model rightInputModel, String parentEl, Set<Model> visited) {
         // Stop recursing if both models are null
         // OR either model is already contained in the visiting history
-        if ((null == leftInputModel && null == rightInputModel) || visited.contains(leftInputModel)
-                || visited.contains(rightInputModel)) {
+        if ((null == leftInputModel && null == rightInputModel) || visited.contains(leftInputModel) || visited.contains(rightInputModel)) {
             return this;
         }
-        Model leftModel = isModelReference(leftInputModel) ? findReferenceModel(leftInputModel, oldDedinitions)
-                : leftInputModel;
-        Model rightModel = isModelReference(rightInputModel) ? findReferenceModel(rightInputModel, newDedinitions)
-                : rightInputModel;
+        Model leftModel = isModelReference(leftInputModel) ? findReferenceModel(leftInputModel, oldDedinitions) : leftInputModel;
+        Model rightModel = isModelReference(rightInputModel) ? findReferenceModel(rightInputModel, newDedinitions) : rightInputModel;
         Map<String, Property> leftProperties = null == leftModel ? null : leftModel.getProperties();
         Map<String, Property> rightProperties = null == rightModel ? null : rightModel.getProperties();
-
         // Diff the properties
         MapKeyDiff<String, Property> propertyDiff = MapKeyDiff.diff(leftProperties, rightProperties);
-
         increased.addAll(convert2ElPropertys(propertyDiff.getIncreased(), parentEl));
         missing.addAll(convert2ElPropertys(propertyDiff.getMissing(), parentEl));
-
         // Recursively find the diff between properties
         List<String> sharedKey = propertyDiff.getSharedKey();
         sharedKey.stream().forEach((key) -> {
@@ -87,8 +79,7 @@ public class ModelDiff {
             Model leftSubModel = findModel(left, oldDedinitions);
             Model rightSubModel = findModel(left, newDedinitions);
             if (leftSubModel != null || rightSubModel != null) {
-                diff(leftSubModel, rightSubModel, buildElString(parentEl, key),
-                        copyAndAdd(visited, leftModel, rightModel));
+                diff(leftSubModel, rightSubModel, buildElString(parentEl, key), copyAndAdd(visited, leftModel, rightModel));
             } else if (left != null && right != null && !left.equals(right)) {
                 // Add a changed ElProperty if not a Reference
                 // Useless
@@ -99,10 +90,9 @@ public class ModelDiff {
     }
 
     private Collection<? extends ElProperty> convert2ElPropertys(Map<String, Property> propMap, String parentEl) {
-
         List<ElProperty> result = new ArrayList<ElProperty>();
-        if (null == propMap) return result;
-
+        if (null == propMap)
+            return result;
         for (Entry<String, Property> entry : propMap.entrySet()) {
             // TODO Recursively get the properties
             result.add(convert2ElProperty(entry.getKey(), parentEl, entry.getValue()));
@@ -128,7 +118,9 @@ public class ModelDiff {
         if (!leftEnums.isEmpty() && !rightEnums.isEmpty()) {
             ListDiff<String> enumDiff = ListDiff.diff(leftEnums, rightEnums, (t, enumVal) -> {
                 for (String value : t) {
-                    if (enumVal.equalsIgnoreCase(value)) { return value; }
+                    if (enumVal.equalsIgnoreCase(value)) {
+                        return value;
+                    }
                 }
                 return null;
             });
@@ -184,26 +176,26 @@ public class ModelDiff {
     }
 
     public List<ElProperty> getIncreased() {
-        return increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIncreased(List<ElProperty> increased) {
-        this.increased = increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getMissing() {
-        return missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissing(List<ElProperty> missing) {
-        this.missing = missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getChanged() {
-        return changed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChanged(List<ElProperty> changed) {
-        this.changed = changed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

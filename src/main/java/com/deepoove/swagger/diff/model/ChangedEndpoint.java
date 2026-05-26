@@ -1,7 +1,6 @@
 package com.deepoove.swagger.diff.model;
 
 import java.util.Map;
-
 import io.swagger.models.HttpMethod;
 import io.swagger.models.Operation;
 
@@ -10,47 +9,44 @@ public class ChangedEndpoint implements Changed {
     private String pathUrl;
 
     private Map<HttpMethod, Operation> newOperations;
+
     private Map<HttpMethod, Operation> missingOperations;
 
     private Map<HttpMethod, ChangedOperation> changedOperations;
 
     public Map<HttpMethod, Operation> getNewOperations() {
-        return newOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setNewOperations(Map<HttpMethod, Operation> newOperations) {
-        this.newOperations = newOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<HttpMethod, Operation> getMissingOperations() {
-        return missingOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissingOperations(Map<HttpMethod, Operation> missingOperations) {
-        this.missingOperations = missingOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<HttpMethod, ChangedOperation> getChangedOperations() {
-        return changedOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChangedOperations(Map<HttpMethod, ChangedOperation> changedOperations) {
-        this.changedOperations = changedOperations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getPathUrl() {
-        return pathUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPathUrl(String pathUrl) {
-        this.pathUrl = pathUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiff() {
-        // newOperations.isEmpty()
-        // || !missingOperations.isEmpty()
-        // ||
-        return !changedOperations.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

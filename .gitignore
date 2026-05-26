@@ -22,3 +22,8 @@ testDiff.md
 testDeprecatedApi.html
 testNewApi.html
 
+
+.aider*
+logs/
+.commit0_scripts/
+.github/workflows/

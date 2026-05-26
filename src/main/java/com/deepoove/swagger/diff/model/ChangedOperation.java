@@ -2,7 +2,6 @@ package com.deepoove.swagger.diff.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import io.swagger.models.parameters.Parameter;
 
 public class ChangedOperation implements Changed {
@@ -10,124 +9,130 @@ public class ChangedOperation implements Changed {
     private String summary;
 
     private List<Parameter> addParameters = new ArrayList<Parameter>();
+
     private List<Parameter> missingParameters = new ArrayList<Parameter>();
 
     private List<ChangedParameter> changedParameter = new ArrayList<ChangedParameter>();
 
     private List<ElProperty> addProps = new ArrayList<ElProperty>();
+
     private List<ElProperty> missingProps = new ArrayList<ElProperty>();
+
     private List<ElProperty> changedProps = new ArrayList<ElProperty>();
+
     private List<String> addConsumes = new ArrayList<>();
+
     private List<String> missingConsumes = new ArrayList<>();
+
     private List<String> addProduces = new ArrayList<>();
+
     private List<String> missingProduces = new ArrayList<>();
 
     public List<Parameter> getAddParameters() {
-        return addParameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAddParameters(List<Parameter> addParameters) {
-        this.addParameters = addParameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Parameter> getMissingParameters() {
-        return missingParameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissingParameters(List<Parameter> missingParameters) {
-        this.missingParameters = missingParameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ChangedParameter> getChangedParameter() {
-        return changedParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChangedParameter(List<ChangedParameter> changedParameter) {
-        this.changedParameter = changedParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getAddProps() {
-        return addProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAddProps(List<ElProperty> addProps) {
-        this.addProps = addProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getMissingProps() {
-        return missingProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissingProps(List<ElProperty> missingProps) {
-        this.missingProps = missingProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getChangedProps() {
-        return changedProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChangedProps(List<ElProperty> changedProps) {
-        this.changedProps = changedProps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getSummary() {
-        return summary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setSummary(String summary) {
-        this.summary = summary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiff() {
-        return !addParameters.isEmpty() || !missingParameters.isEmpty() || !changedParameter.isEmpty() || isDiffProp()
-                || isDiffConsumes() || isDiffProduces();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiffProp() {
-        return !addProps.isEmpty() || !missingProps.isEmpty() || !changedProps.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiffParam() {
-        return !addParameters.isEmpty() || !missingParameters.isEmpty() || !changedParameter.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiffConsumes() {
-        return !addConsumes.isEmpty() || !missingConsumes.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiffProduces() {
-        return !addProduces.isEmpty() || !missingProduces.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getAddConsumes() {
-        return this.addConsumes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAddConsumes(List<String> increased) {
-        this.addConsumes = increased == null ? new ArrayList<>() : increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getMissingConsumes() {
-        return this.missingConsumes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissingConsumes(List<String> missing) {
-        this.missingConsumes = missing == null ? new ArrayList<>() : missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getAddProduces() {
-        return this.addProduces;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setAddProduces(List<String> increased) {
-        this.addProduces = increased == null ? new ArrayList<>() : increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getMissingProduces() {
-        return this.missingProduces;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissingProduces(List<String> missing) {
-        this.missingProduces = missing == null ? new ArrayList<>() : missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

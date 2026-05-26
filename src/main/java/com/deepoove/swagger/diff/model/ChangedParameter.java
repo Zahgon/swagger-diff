@@ -2,80 +2,82 @@ package com.deepoove.swagger.diff.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import io.swagger.models.parameters.Parameter;
 
 public class ChangedParameter implements Changed {
 
     private List<ElProperty> increased = new ArrayList<ElProperty>();
+
     private List<ElProperty> missing = new ArrayList<ElProperty>();
+
     private List<ElProperty> changed = new ArrayList<ElProperty>();
 
     private Parameter leftParameter;
+
     private Parameter rightParameter;
 
     private boolean isChangeRequired;
+
     // private boolean isChangeType;
     private boolean isChangeDescription;
 
     public boolean isChangeRequired() {
-        return isChangeRequired;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChangeRequired(boolean isChangeRequired) {
-        this.isChangeRequired = isChangeRequired;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isChangeDescription() {
-        return isChangeDescription;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChangeDescription(boolean isChangeDescription) {
-        this.isChangeDescription = isChangeDescription;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Parameter getLeftParameter() {
-        return leftParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setLeftParameter(Parameter leftParameter) {
-        this.leftParameter = leftParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Parameter getRightParameter() {
-        return rightParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setRightParameter(Parameter rightParameter) {
-        this.rightParameter = rightParameter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isDiff() {
-        return isChangeRequired || isChangeDescription || !increased.isEmpty() || !missing.isEmpty()
-                || !changed.isEmpty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getIncreased() {
-        return increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setIncreased(List<ElProperty> increased) {
-        this.increased = increased;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getMissing() {
-        return missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMissing(List<ElProperty> missing) {
-        this.missing = missing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<ElProperty> getChanged() {
-        return changed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setChanged(List<ElProperty> changed) {
-        this.changed = changed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

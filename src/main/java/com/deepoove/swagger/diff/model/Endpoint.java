@@ -7,50 +7,52 @@ import io.swagger.models.Path;
 public class Endpoint {
 
     private String pathUrl;
+
     private HttpMethod method;
+
     private String summary;
 
     private Path path;
+
     private Operation operation;
 
     public String getPathUrl() {
-        return pathUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPathUrl(String pathUrl) {
-        this.pathUrl = pathUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public HttpMethod getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setMethod(HttpMethod method) {
-        this.method = method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getSummary() {
-        return summary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setSummary(String summary) {
-        this.summary = summary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Path getPath() {
-        return path;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setPath(Path path) {
-        this.path = path;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Operation getOperation() {
-        return operation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setOperation(Operation operation) {
-        this.operation = operation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }
